@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="friendsList">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body ng-controller="mainCtrl">
+
+  <!-- <script src="myscripts.js"></script> -->
+
+  <div ng-repeat="friend in friends track by $index">
+    <p> {{friend}} </p>
+  </div>
+
+  <form ng-submit="addPerson()">
+
+    <input ng-model="newFriend" type="text" placeholder="name">    </input>
+    <button ng-click="addFriend()"> add friend   </button>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/mainCtrl.js"></script>
+  </body>
+</html>
